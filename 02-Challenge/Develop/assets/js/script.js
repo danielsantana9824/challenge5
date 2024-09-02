@@ -43,7 +43,6 @@ function generateTaskId() {
 // Todo: create a function to create a task card
 function createTaskCard(tasks) {
 
-
     const cardColumnEl = $('<div>');
     cardColumnEl.addClass('col-12 col-sm-4 col-md-3 col-lg-4 m-1');
 
@@ -75,7 +74,7 @@ function createTaskCard(tasks) {
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
-
+    $("#todo-cards").draggable();
 }
 
 // Todo: create a function to handle adding a new task
@@ -86,21 +85,21 @@ function handleAddTask(event) {
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
 
-    
+
 
     event.preventDefault();
-    const button=$(this);
+    const button = $(this);
 
     console.log(this);
-    
+
     button.parent().remove();
 }
 
-shoppingListEl.on('click', '.delete' , function (event) {
-    // event.preventDefault();
-    const button=$(this);
-    button.parent().parent().parent().remove();
-  });
+// shoppingListEl.on('click', '.delete' , function (event) {
+//     // event.preventDefault();
+//     const button=$(this);
+//     button.parent().parent().parent().remove();
+//   });
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {

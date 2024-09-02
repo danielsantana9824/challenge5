@@ -30,6 +30,7 @@
     <!-- Todo: Create a modal with a form to add tasks -->
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
+
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
 
           <div class="card-header bg-white">
@@ -38,11 +39,9 @@
 
           <!-- body -->
 
-          <div class="card-body bg-light">
-            <div id="todo-cards"></div>
+          <div class="card-body bg-light ">
+            <div id="todo-cards" onclick="renderTaskList()" ></div>
           </div>
-
-
 
         </div>
       </div>
@@ -144,3 +143,4 @@
       </div>
     </div>
   </div>
+</div>
