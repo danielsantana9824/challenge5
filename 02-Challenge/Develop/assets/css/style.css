@@ -14,3 +14,14 @@ body {
 .task-card:hover {
   cursor: grab;
 }
+
+.btn-danger {
+  border-color: aliceblue;
+}
+
+
+.toDo {
+  background-color: rgb(193 1 1 / 87%);
+  width: 100%;
+  color: white;
+}
