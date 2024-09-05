@@ -21,13 +21,12 @@ body {
 
 
 .toDo {
-  background-color: rgb(193 1 1 / 87%);
+   background-color: rgb(193 1 1 / 87%); 
   width: 100%;
   color: white;
 }
 
-#draggable {
-  width: 150px;
-  height: 150px;
-  padding: 0.5em;
+.dif {
+  white-space: nowrap;
+  z-index: 1;
 }
