@@ -138,19 +138,21 @@ function handleAddTask(event) {
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
-
-    console.log("here");
-
+                                // can i change this?
     const projectId = $(this).attr('data-project-id');
-    console.log(projectId);
+    const projects = loadData();
 
+    console.log("projectId",projectId);
+    
 
-    // event.preventDefault();
-    // const button = $(this);
+    projects.forEach((project) => {
+        if (project.id === projectId) {
+            projects.splice(projects.indexOf(project), 1);
+        }
+    });
 
-    // console.log(this);
-
-    // button.parent().remove();
+    saveLocal(projects);
+    createTaskCard();
 }
 
 // Todo: create a function to handle dropping a task into a new status lane
@@ -159,7 +161,7 @@ function handleDrop(event, ui) {
     const tasks = loadData();
 
     // ask
-//   const taskId = ui.draggable[0].dataset.projectId;
+    //   const taskId = ui.draggable[0].dataset.projectId;
 
     const taskId = ui.draggable[0].attributes[1].value;
 
