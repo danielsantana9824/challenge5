@@ -139,10 +139,10 @@ function handleAddTask(event) {
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event) {
 
-    console.log("here");
+    // console.log("here");
 
-    const projectId = $(this).attr('data-project-id');
-    console.log(projectId);
+    // const projectId = $(this).attr('data-project-id');
+    // console.log(projectId);
 
 
     // event.preventDefault();

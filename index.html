@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-  <link rel="stylesheet" href="02-Challenge\Develop\assets\js\script.js"/>
-  <link rel="stylesheet" href="/02-Challenge/Develop/assets/css/style.css">
+  <link rel="stylesheet" href="./develop/assets/js/script.js"/>
+  <link rel="stylesheet" href="./develop/assets/css/style.css">
   <title>Task Board</title>
 </head>
 
@@ -58,9 +58,8 @@
 
 
           <div class="card-body bg-light">
-            <div id="in-progress-cards"></div>
+            <div id="in-progress-cards" onclick="renderTaskList()"></div>
           </div>
-
 
         </div>
       </div>
@@ -74,12 +73,9 @@
 
           <!-- body -->
 
-
           <div class="card-body bg-light">
-            <div id="done-cards"></div>
+            <div id="done-cards" onclick="renderTaskList()"></div>
           </div>
-
-
 
         </div>
       </div>
@@ -94,7 +90,7 @@
   <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
   integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
-  <script src="02-Challenge\Develop\assets\js\script.js"></script>
+  <script src="./Develop/assets/js/script.js"></script>
 </body>
 
 </html>
