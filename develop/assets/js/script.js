@@ -133,15 +133,15 @@ function createTaskCard() {
 function renderTaskList() {
     $(".lane").droppable({
         accept: ".dif",
-        drop: function(event, ui) {
-            handleDrop(event, ui); 
+        drop: function (event, ui) {
+            handleDrop(event, ui);
         }
     });
 
     $(".dif").draggable({
         helper: "clone",
         revert: "invalid",
-        start: function(event, ui) {
+        start: function (event, ui) {
             ui.helper.addClass('dragging');
         }
     });
@@ -175,8 +175,8 @@ function handleDeleteTask(event) {
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
     const tasks = loadData();
-    const taskId = ui.draggable.attr('data-project-id'); 
-    const newStatus = $(event.target).attr('id'); 
+    const taskId = ui.draggable.attr('data-project-id');
+    const newStatus = $(event.target).attr('id');
 
     tasks.forEach(task => {
         if (task.id == taskId) {
@@ -184,8 +184,8 @@ function handleDrop(event, ui) {
         }
     });
 
-    saveLocal(tasks); 
-    createTaskCard(); 
+    saveLocal(tasks);
+    createTaskCard();
 }
 
 function cleanForm() {
@@ -198,19 +198,19 @@ $(document).ready(function () {
 
 createTaskCard();
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     $(".lane").droppable({
         accept: ".dif",
-        drop: function(event, ui) {
-            handleDrop(event, ui); 
+        drop: function (event, ui) {
+            handleDrop(event, ui);
         }
     });
 
     $(".dif").draggable({
         helper: "clone",
         revert: "invalid",
-        start: function(event, ui) {
+        start: function (event, ui) {
             ui.helper.addClass('dragging');
         }
     });
